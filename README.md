@@ -1,6 +1,6 @@
 # Module5-challenge
 
-## Work Day Scheduler Starter Code
+Work Day Scheduler Starter Code
 
 ## User Story
 
