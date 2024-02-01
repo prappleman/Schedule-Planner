@@ -7,19 +7,16 @@ $(function () {
       var timeBlockId = "hour-" + hour;
       var formattedHour = dayjs().hour(hour).format("ha");
 
-      // Create a time block for each hour
       var timeBlock = $('<div class="row time-block" id="' + timeBlockId + '">');
       timeBlock.append('<div class="col-2 col-md-1 hour text-center py-3">' + formattedHour + '</div>');
       timeBlock.append('<textarea class="col-8 col-md-10 description" rows="3"></textarea>');
       timeBlock.append('<button class="btn saveBtn col-2 col-md-1" aria-label="save"><i class="fas fa-save" aria-hidden="true"></i></button>');
 
-      // Append the time block to the container
       container.append(timeBlock);
     }
   }
-
-  // Call the function to generate time blocks
   generateTimeBlocks();
+
 
   // Add a listener for click events on the save button.
   $(".saveBtn").on("click", function () {
@@ -28,7 +25,7 @@ $(function () {
     localStorage.setItem(timeBlockId, userInput);
   });
 
-  // Add code to apply the past, present, or future class to each time block.
+  // Add code to apply the past, present, or future class to each time block. (Adds color.)
   function updateHourClasses() {
     var currentHour = dayjs().hour();
 
@@ -46,7 +43,6 @@ $(function () {
     });
   }
 
-  // Call the function initially and set it to update periodically (e.g., every minute).
   updateHourClasses();
   setInterval(updateHourClasses, 60000);
 
@@ -57,7 +53,6 @@ $(function () {
     $(this).find(".description").val(savedUserInput);
   });
 
-  // Add code to display the current date in the header of the page.
   $("#currentDay").text(dayjs().format("MMMM D, YYYY"));
 
 });
