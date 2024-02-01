@@ -17,7 +17,6 @@ $(function () {
   }
   generateTimeBlocks();
 
-
   // Add a listener for click events on the save button.
   $(".saveBtn").on("click", function () {
     var timeBlockId = $(this).closest(".time-block").attr("id");
