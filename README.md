@@ -1,4 +1,4 @@
-# Module5-challenge
+# Schedule Planner
 
 Work Day Scheduler Starter Code
 
