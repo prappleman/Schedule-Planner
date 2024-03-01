@@ -40,7 +40,7 @@ THEN the saved events persist
 
 ## Deployed Webpage
 
-https://prappleman.github.io/module5-challenge/
+https://prappleman.github.io/Schedule-Planner/
 
 ## App Photos
 
